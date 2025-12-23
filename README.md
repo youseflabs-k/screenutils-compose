@@ -16,13 +16,40 @@ Scale dimensions, padding, radius, and text sizes from a fixed **design size** t
 
 ## Install
 
+### Maven Central
+Add the dependency to your `build.gradle`:
+
 ```kotlin
 dependencies {
   implementation("io.github.youseflabs:screenutil-compose:<version>")
 }
 ```
 
-Replace `<version>` with the latest release.
+Replace `<version>` with the latest release from [Releases](https://github.com/Ahmedmmy97/screenutils-compose/releases).
+
+### GitHub Packages
+Add the GitHub Packages repository to your `settings.gradle.kts` or `build.gradle`:
+
+```kotlin
+repositories {
+    mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/Ahmedmmy97/screenutils-compose")
+        credentials {
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+        }
+    }
+}
+```
+
+Then add the dependency:
+
+```kotlin
+dependencies {
+  implementation("io.github.youseflabs:screenutil-compose:<version>")
+}
+```
 
 ---
 
