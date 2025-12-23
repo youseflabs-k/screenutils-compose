@@ -45,7 +45,7 @@ Add the dependency to your module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("io.github.youseflabs-k:screenutil-compose:0.1.3")
+    implementation("io.github.youseflabs-k:screenutil-compose:<latest-version>")
 }
 ```
 
@@ -54,26 +54,7 @@ dependencies {
 
 ```groovy
 dependencies {
-    implementation 'io.github.youseflabs-k:screenutil-compose:0.1.3'
-}
-```
-</details>
-
-<details>
-<summary><b>Version Catalog (libs.versions.toml)</b></summary>
-
-```toml
-[versions]
-screenutil-compose = "0.1.3"
-
-[libraries]
-screenutil-compose = { module = "io.github.youseflabs-k:screenutil-compose", version.ref = "screenutil-compose" }
-```
-
-Then in your `build.gradle.kts`:
-```kotlin
-dependencies {
-    implementation(libs.screenutil.compose)
+    implementation 'io.github.youseflabs-k:screenutil-compose:<latest-version>'
 }
 ```
 </details>
