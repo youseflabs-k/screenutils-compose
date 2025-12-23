@@ -298,15 +298,24 @@ ScreenUtilInit(design = DesignSize(768f, 1024f)) // Tablet
 
 ---
 
-## 🛡️ ProGuard
+## 🛡️ ProGuard / R8
 
-No special rules are required for typical usage.
+**No configuration needed!** The library automatically includes consumer ProGuard rules.
 
-If your setup aggressively shrinks/obfuscates and you encounter issues, add:
+Your extension functions will work correctly even when your app is minified/obfuscated.
+
+<details>
+<summary><b>If you encounter issues (click to expand)</b></summary>
+
+If you're using aggressive ProGuard/R8 configuration and extensions aren't working, add:
 
 ```proguard
+# ScreenUtil Compose
 -keep class io.github.youseflabs.screenutil.** { *; }
+-keep class io.github.youseflabs.screenutil.ExtensionsKt { *; }
 ```
+
+</details>
 
 ---
 
