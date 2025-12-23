@@ -5,11 +5,11 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-group = "io.github.youseflabs"
+group = "io.github.youseflabs-k"
 version = "0.1.0"
 
 android {
-    namespace = "io.github.youseflabs.screenutil"
+    namespace = "io.github.youseflabs-k.screenutil"
     compileSdk = 36
 
     defaultConfig {
@@ -96,7 +96,7 @@ afterEvaluate {
                 pom {
                     name.set("screenutil-compose")
                     description.set("ScreenUtil-style scaling helpers for Jetpack Compose")
-                    url.set("https://github.com/Ahmedmmy97/screenutils-compose")
+                    url.set("https://github.com/youseflabs-k/screenutils-compose")
 
                     licenses {
                         license {
@@ -105,9 +105,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        url.set("https://github.com/Ahmedmmy97/screenutils-compose")
-                        connection.set("scm:git:https://github.com/Ahmedmmy97/screenutils-compose.git")
-                        developerConnection.set("scm:git:ssh://github.com/Ahmedmmy97/screenutils-compose.git")
+                        url.set("https://github.com/youseflabs-k/screenutils-compose")
+                        connection.set("scm:git:https://github.com/youseflabs-k/screenutils-compose.git")
+                        developerConnection.set("scm:git:ssh://github.com/youseflabs-k/screenutils-compose.git")
                     }
                 }
             }
@@ -116,7 +116,7 @@ afterEvaluate {
         repositories {
             maven {
                 name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/Ahmedmmy97/screenutils-compose")
+                url = uri("https://maven.pkg.github.com/youseflabs-k/screenutils-compose")
                 credentials {
                     username = (project.findProperty("gpr.user") as String?) ?: System.getenv("GITHUB_ACTOR")
                     password = (project.findProperty("gpr.token") as String?) ?: System.getenv("GITHUB_TOKEN")
