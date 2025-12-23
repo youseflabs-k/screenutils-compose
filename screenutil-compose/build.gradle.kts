@@ -13,7 +13,7 @@ jreleaser {
     gitRootSearch.set(true)
 }
 group = "io.github.youseflabs-k"
-version = "0.1.3"
+version = "0.1.1"
 
 android {
     namespace = "io.github.youseflabs.screenutil"
