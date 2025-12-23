@@ -25,9 +25,11 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build release artifacts
+      - name: Build + stage Maven artifacts (local folder)
         run: |
-          ./gradlew :screenutil-compose:clean                    :screenutil-compose:assembleRelease                    :screenutil-compose:publishReleasePublicationToMavenLocal
+          ./gradlew :screenutil-compose:clean \
+                    :screenutil-compose:assembleRelease \
+                    :screenutil-compose:publishReleasePublicationToStagingRepository
 
       - name: Publish to Maven Central (JReleaser)
         env:
