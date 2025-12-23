@@ -1,0 +1,77 @@
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+**/build/
+
+# Gradle wrapper (keep the wrapper itself!)
+!gradle/wrapper/gradle-wrapper.jar
+
+# =========================
+# Local configuration
+# =========================
+local.properties
+gradle.properties
+
+# =========================
+# Android Studio / IntelliJ
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Android Studio caches
+.externalNativeBuild/
+.cxx/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Kotlin / KSP / KAPT
+# =========================
+.kotlin/
+kaptGenerated/
+ksp/
+**/ksp/
+
+# =========================
+# Compose compiler outputs
+# =========================
+**/compose_compiler/
+
+# =========================
+# Test artifacts
+# =========================
+**/out/
+
+# =========================
+# Signing / secrets
+# =========================
+*.keystore
+*.jks
+*.pem
+*.asc
+
+# =========================
+# CI / publishing secrets
+# =========================
+.env
+.env.*
+
+# =========================
+# Maven local / temp
+# =========================
+.mvn/
+target/
