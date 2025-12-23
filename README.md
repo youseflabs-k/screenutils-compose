@@ -25,7 +25,7 @@ dependencies {
 }
 ```
 
-Replace `<version>` with the latest release from [Releases](https://github.com/Ahmedmmy97/screenutils-compose/releases).
+Replace `<version>` with the latest release from [Releases](https://github.com/youseflabs-k/screenutils-compose/releases).
 
 ### GitHub Packages
 Add the GitHub Packages repository to your `settings.gradle.kts` or `build.gradle`:
@@ -34,7 +34,7 @@ Add the GitHub Packages repository to your `settings.gradle.kts` or `build.gradl
 repositories {
     mavenCentral()
     maven {
-        url = uri("https://maven.pkg.github.com/Ahmedmmy97/screenutils-compose")
+        url = uri("https://maven.pkg.github.com/youseflabs-k/screenutils-compose")
         credentials {
             username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
             password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
@@ -159,7 +159,7 @@ fun PreviewExampleScreen() {
 ## Release info
 - **Group:** `io.github.youseflabs`
 - **Artifact:** `screenutil-compose`
-- **Repository:** [Ahmedmmy97/screenutils-compose](https://github.com/Ahmedmmy97/screenutils-compose)
+- **Repository:** [youseflabs-k/screenutils-compose](https://github.com/youseflabs-k/screenutils-compose)
 
 ---
 

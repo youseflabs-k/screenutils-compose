@@ -29,3 +29,4 @@ android-library = { id = "com.android.library", version = "8.13.2" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.3.0" }
 android-application = { id = "com.android.application", version = "8.13.2" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jreleaser = { id = "org.jreleaser", version = "1.21.0" }

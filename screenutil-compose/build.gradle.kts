@@ -2,14 +2,21 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     id("maven-publish")
+    alias(libs.plugins.jreleaser)
     alias(libs.plugins.kotlin.compose)
 }
+jreleaser {
+    // IMPORTANT: always use the root config file
+    configFile.set(rootProject.file("jreleaser.yml"))
 
+    // optional but helpful
+    gitRootSearch.set(true)
+}
 group = "io.github.youseflabs-k"
-version = "0.1.0"
+version = "0.1.3"
 
 android {
-    namespace = "io.github.youseflabs-k.screenutil"
+    namespace = "io.github.youseflabs.screenutil"
     compileSdk = 36
 
     defaultConfig {
@@ -109,6 +116,13 @@ afterEvaluate {
                         connection.set("scm:git:https://github.com/youseflabs-k/screenutils-compose.git")
                         developerConnection.set("scm:git:ssh://github.com/youseflabs-k/screenutils-compose.git")
                     }
+                    developers {
+                        developer {
+                            id.set("Ahmedmmy97")
+                            name.set("Ahmed Yousef")
+                            url.set("https://github.com/Ahmedmmy97")
+                        }
+                    }
                 }
             }
         }
@@ -121,6 +135,10 @@ afterEvaluate {
                     username = (project.findProperty("gpr.user") as String?) ?: System.getenv("GITHUB_ACTOR")
                     password = (project.findProperty("gpr.token") as String?) ?: System.getenv("GITHUB_TOKEN")
                 }
+            }
+            maven {
+                name = "staging"
+                url = uri(layout.buildDirectory.dir("staging-deploy"))
             }
         }
     }

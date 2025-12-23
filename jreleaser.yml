@@ -1,0 +1,45 @@
+project:
+  name: screenutil-compose
+  description: ScreenUtil-style scaling helpers for Jetpack Compose
+  authors:
+    - Ahmed Yousef
+  license: MIT
+  inceptionYear: 2025
+  copyright: "Copyright (c) 2025 Ahmed Yousef"
+
+  links:
+    homepage: https://github.com/youseflabs-k/screenutils-compose
+    documentation: https://github.com/youseflabs-k/screenutils-compose#readme
+
+  languages:
+    java:
+      groupId: io.github.youseflabs-k
+      artifactId: screenutil-compose
+
+release:
+  github:
+    enabled: true
+    owner: youseflabs-k
+    name: screenutils-compose
+    token: ${JRELEASER_GITHUB_TOKEN}
+    overwrite: true
+    # If YOU create/push the tag yourself (recommended):
+    skipTag: true
+
+signing:
+  active: ALWAYS
+  armored: true
+  verify: true
+
+deploy:
+  maven:
+    mavenCentral:
+      app:
+        verifyPom: false
+        applyMavenCentralRules: false
+        active: ALWAYS
+        sign: true
+        url: https://central.sonatype.com/api/v1/publisher
+        # This MUST be a folder containing a staged Maven repository layout
+        stagingRepositories:
+          - build/staging-deploy

@@ -10,3 +10,11 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
 }
+
+buildscript {
+    dependencies {
+        classpath("org.bouncycastle:bcpg-jdk18on:1.83")
+        classpath("org.bouncycastle:bcprov-jdk18on:1.83")
+        classpath("org.apache.commons:commons-compress:1.28.0")
+    }
+}

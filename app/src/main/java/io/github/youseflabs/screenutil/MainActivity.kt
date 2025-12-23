@@ -5,8 +5,6 @@ import androidx.activity.ComponentActivity
 import io.github.youseflabs.screenutil.sample.SampleScreen
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.platform.ComposeView
-import io.github.youseflabs.screenutil.ScreenUtilInit
-import io.github.youseflabs.screenutil.DesignSize
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
