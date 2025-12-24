@@ -16,15 +16,6 @@ project:
       groupId: io.github.youseflabs-k
       artifactId: screenutil-compose
 
-release:
-  github:
-    enabled: false
-    owner: youseflabs-k
-    name: screenutils-compose
-    token: ${JRELEASER_GITHUB_TOKEN}
-    overwrite: true
-    # If YOU create/push the tag yourself (recommended):
-    skipTag: true
 
 signing:
   active: ALWAYS

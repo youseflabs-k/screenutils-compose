@@ -40,6 +40,4 @@ jobs:
           JRELEASER_GPG_SECRET_KEY: ${{ secrets.SIGNING_KEY }}
           JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.PUBLIC_SIGNING_KEY }}
           JRELEASER_GPG_PASSPHRASE: ${{ secrets.SIGNING_PASSWORD }}
-          # Optional if release.github.enabled=true:
-          JRELEASER_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: ./gradlew jreleaserFullRelease --stacktrace
+        run: ./gradlew jreleaserDeploy --stacktrace
