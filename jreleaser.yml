@@ -18,7 +18,7 @@ project:
 
 release:
   github:
-    enabled: true
+    enabled: false
     owner: youseflabs-k
     name: screenutils-compose
     token: ${JRELEASER_GITHUB_TOKEN}
