@@ -6,8 +6,10 @@ androidxTestRunner = "1.7.0"
 androidxTestRules = "1.7.0"
 junit4 = "4.13.2"
 kotlin = "2.3.0"
+activityCompose = "1.9.3"
 
 [libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }

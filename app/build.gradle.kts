@@ -49,6 +49,9 @@ dependencies {
     // Depend on your library module
     implementation(project(":screenutil-compose"))
 
+    // Activity Compose
+    implementation(libs.androidx.activity.compose)
+
     // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)

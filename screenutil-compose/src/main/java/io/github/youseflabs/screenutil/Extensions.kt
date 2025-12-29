@@ -1,5 +1,6 @@
 package io.github.youseflabs.screenutil
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
@@ -106,4 +107,50 @@ val Int.xw: Dp
 
 val Float.xw: Dp
     @Composable get() = (this * currentScreenUtilState().scaleMax).dp
+
+/**
+ * Converts raw pixels (Int) to height-scaled Dp.
+ * Similar to Density.toDp() but applies height scaling.
+ *
+ * Example:
+ * ```kotlin
+ * val density = LocalDensity.current
+ * val scaledHeight = 100.toH(density) // Converts 100px to height-scaled Dp
+ * ```
+ */
+@Composable
+fun Int.toH(): Dp {
+    val density = LocalDensity.current.density
+    return (this / density).h
+}
+
+/**
+ * Converts raw pixels (Float) to height-scaled Dp.
+ * Similar to Density.toDp() but applies height scaling.
+ */
+@Composable
+fun Float.toH(): Dp {
+    val density = LocalDensity.current.density
+    return (this / density).h
+}
+
+/**
+ * Converts raw pixels (Int) to width-scaled Dp.
+ * Similar to Density.toDp() but applies width scaling.
+ */
+@Composable
+fun Int.toW(): Dp {
+    val density = LocalDensity.current.density
+    return (this / density).w
+}
+
+/**
+ * Converts raw pixels (Float) to width-scaled Dp.
+ * Similar to Density.toDp() but applies width scaling.
+ */
+@Composable
+fun Float.toW(): Dp {
+    val density = LocalDensity.current.density
+    return (this / density).w
+}
 
